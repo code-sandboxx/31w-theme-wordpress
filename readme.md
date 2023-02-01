@@ -1,6 +1,6 @@
 # Exercice #1
 ## Installation de Wordpress et création de thème
-### Auteur: Eddy Martin
+### Auteur: Olena K
 #### Objectifs
 - Installer WP
 - Créer un thème simple
