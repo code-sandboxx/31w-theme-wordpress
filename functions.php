@@ -25,9 +25,9 @@ add_theme_support( 'custom-logo',
 //---------------------- Enregistrement des menus -------------------                    
 
 function enregistrement_des_menus(){   // ajout des menus
-	register_nav_menus( array(
+	register_nav_menus(array(
 	    'menu_entete' => 'Menu entête' ,
 	    'menu_footer'  => 'Menu pied de page' ,
 	) );
 }
-add_action( 'after_setup_theme', 'mytheme_register_nav_menu', 0 ); // 'after_setup_theme' - hook
+add_action( 'after_setup_theme', 'register_nav_menus', 0 ); // 'after_setup_theme' - hook
