@@ -7,27 +7,31 @@ function ajouter_styles() {
                 filemtime(get_template_directory() . '/style.css')); // la de la dernière feuille de style
 }
 add_action( 'wp_enqueue_scripts', 'ajouter_styles' );
+
+/* ------------------ Add_theme_support -------------------------- */
 add_theme_support( 'html5', 
-                    array( 'search-form', 
+                    array(  'search-form',
                             'comment-form', 
                             'comment-list', 
                             'gallery', 
                             'caption' 
-                        ) );
+                    ) );
 
 add_theme_support( 'title-tag' );
+
 add_theme_support( 'custom-logo', 
-                        array(
-                            'height' => 150, // les dimensions de logo
-                            'width'  => 150,
-                        ) );
+                    array(
+                        'height' => 150,
+                        'width'  => 150,
+                    ) );
 
-//---------------------- Enregistrement des menus -------------------                    
+/* ------------------ Enregistrement des menus ------------------- */
 
-function enregistrement_des_menus(){   // ajout des menus
-	register_nav_menus(array(
-	    'menu_entete' => 'Menu entête' ,
-	    'menu_footer'  => 'Menu pied de page' ,
-	) );
-}
-add_action( 'after_setup_theme', 'register_nav_menus', 0 ); // 'after_setup_theme' - hook
+    function enregistrement_des_menus(){
+        register_nav_menus( array(
+            'menu_entete' => 'Menu entête' ,
+            'menu_footer'  => 'Menu pied de page',
+        ) );
+    }
+    add_action( 'after_setup_theme', 'enregistrement_des_menus', 0 );
+                   

@@ -1,0 +1,28 @@
+/*
+Theme Name: 31w-olena
+Theme URI: https://github.com/code-sandboxx/31w-theme-wordpress/tree/exer1
+Author: Olena K
+Author URI: Olena K
+Description: Introduction à la création d'un thème Wordpress
+Version: 1.0
+Requires at least: 6.1.1
+Tested up to: 5.4
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: 31w-olena-k
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/* -------------------------- NORMALIZE */
+@import "normalize/normalize";
+@import "normalize/boxsizing";
+
+
+/* -------------------------- BASE */
+@import "base/heading";
+
+/* -------------------------- COMPOSANT */
+@import "composant/entete";
+
