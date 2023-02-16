@@ -1,4 +1,15 @@
+.logomenu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.site__entete{
+
+}
+
 .menu-entete-container {
+    
+    flex:1;
 
     .menu { //ul
         display : flex;
