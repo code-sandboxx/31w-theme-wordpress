@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*
 Theme Name: 31w-olena
-Theme URI: https://github.com/code-sandboxx/31w-theme-wordpress/tree/exer1
+Theme URI: https://github.com/code-sandboxx/31w-theme-wordpress/tree/exer2
 Author: Olena K
 Author URI: Olena K
 Description: Introduction à la création d'un thème Wordpress
@@ -384,42 +384,179 @@ p {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 
+ul {
+  list-style-type: square;
+}
+
+ol {
+  padding-left: 20px;
+}
+
+ul, li {
+  padding-left: 10px;
+}
+
+ol, li {
+  padding-left: 10px;
+}
+
+strong, b {
+  color: rgb(6, 17, 13);
+}
+
+em, i {
+  color: rgb(45, 3, 3);
+}
+
+a {
+  color: blueviolet;
+}
+
+code {
+  color: red;
+}
+
+hr {
+  border-top: 1px dotted rgb(18, 53, 178);
+}
+
 /* -------------------------- COMPOSANT */
 .logomenu {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #2b2b2b;
+}
+.logomenu a {
+  margin-left: 40px;
+}
+.logomenu img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+
+.site__entete {
+  padding-bottom: 30px;
+  background-color: rgb(222, 198, 251);
+}
+.site__entete a {
+  color: #6c3644;
+  text-decoration: none;
+}
+.site__entete h2 {
+  margin-bottom: 25px;
+}
+.site__entete h1, .site__entete h2 {
+  margin-left: 40px;
 }
 
 .menu-entete-container {
+  margin-top: 20px;
+  margin-bottom: 20px;
   flex: 1;
 }
 .menu-entete-container .menu {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   list-style-type: none;
-  margin-left: auto;
 }
 .menu-entete-container .menu .menu-item {
   flex: 1 0 50px;
 }
 .menu-entete-container .menu .menu-item a {
   padding: 3px 5px;
-  color: #555;
+  color: #dec6fb;
+  transition: color 0.5s ease;
 }
 .menu-entete-container .menu .menu-item a:hover {
-  color: #0f0;
+  color: #c0f9b7;
 }
 
 .blocflex {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 .blocflex article {
   margin: 10px;
   padding: 5px;
-  border: 1px solid grey;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 30px;
   flex: 1 0 300px;
+  transition: 0.3s;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+.blocflex article:hover {
+  transform: scale(1.1);
+  background: rgba(203, 249, 183, 0.7);
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+  backdrop-filter: blur(3.4px);
+  -webkit-backdrop-filter: blur(3.4px);
+  border: 1px solid rgb(255, 255, 255);
+}
+.blocflex article a {
+  margin: 10px 20px 10px 20px;
+  text-decoration: none;
+  color: #07485B;
+}
+.blocflex article a:hover {
+  color: #D6634B;
+}
+.blocflex article p {
+  margin: 10px;
+  margin-bottom: 20px;
+}
+
+.recherche {
+  margin-right: 40px;
+}
+.recherche input[type=search] {
+  border-radius: 7px;
+  background-color: #ffffff;
+  padding: 5px;
+}
+.recherche button[type=submit] {
+  padding: 5px;
+  background-color: #c0f9b7;
+  border-radius: 7px;
+}
+
+body {
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  margin-top: 0px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 30px;
+  background-color: #ffffff;
+  opacity: 1;
+  background-image: repeating-radial-gradient(circle at 0 0, transparent 0, #ffffff 17px), repeating-linear-gradient(rgba(222, 198, 251, 0.3333333333), #dec6fb);
+}
+
+h2 {
+  color: #07485B;
+}
+
+footer {
+  background-color: #2b2b2b;
+}
+footer h3 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }/*# sourceMappingURL=style.css.map */
