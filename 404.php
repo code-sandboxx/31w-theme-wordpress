@@ -4,7 +4,7 @@
 */ 
 ?>
 <?php get_header()?> 
-<main>
+<main class = "site__main">
     <code>404</code>
     <h1>Erreur 404 - la page n'existe pas</h1>
     
