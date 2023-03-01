@@ -1,4 +1,4 @@
-# Exercice #2
+# TP #1
 ## Ameliorer la structure générale  du thème  
 ### Auteur: Olena K
 #### Objectifs
