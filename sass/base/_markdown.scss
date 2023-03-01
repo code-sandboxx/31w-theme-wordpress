@@ -1,0 +1,32 @@
+ul{
+    list-style-type: square;
+} 
+ol{
+    padding-left: 20px;
+    
+}
+ul,li{
+    padding-left: 10px;
+}
+ol,li{
+    padding-left: 10px;
+}
+
+strong,b{//le texte en gras
+    color: rgb(6, 17, 13);
+}
+em,i{//le texte en italique
+    color: rgb(45, 3, 3);
+}
+a{
+    color: blueviolet;
+} 
+
+
+code {
+    color: red;
+}
+
+hr {
+    border-top: 1px dotted rgb(18, 53, 178);
+}
