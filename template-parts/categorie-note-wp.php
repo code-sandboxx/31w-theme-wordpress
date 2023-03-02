@@ -9,7 +9,7 @@ $sigle = substr($titre, 0, 7);
 $titre_long = substr($titre, 7, -5);
 $duree = "90h"; // a compléter
 ?>
-<article class>
+<article class="blocflex__article">
     <h5><a href="<?php the_permalink(); ?>"> <?= $sigle; ?></a></h5>   
     <p><?= wp_trim_words(get_the_excerpt(), 15) ?></p>
 

@@ -5,7 +5,7 @@
     margin-left: 40px;
     margin-right: 40px;
     
-    article{
+    .blocflex__article{
         margin: 10px;
         padding: 5px;
         background-color:rgba(255, 255, 255, 0.4);        
@@ -20,7 +20,7 @@
         border: 1px solid rgba(255, 255, 255, 0.8);        
     }
 
-    article:hover{
+    .blocflex__article:hover{
         transform: scale(1.1);
         background: rgba(203, 249, 183, 0.7);
         border-radius: 30px;
@@ -30,18 +30,22 @@
         border: 1px solid rgba(255, 255, 255, 1);
     }
 
-    article a{
+    .blocflex__article a{
         margin: 10px 20px 10px 20px;
         text-decoration: none;
         color: #07485B;
     }
 
-    article a:hover{
+    .blocflex__article a:hover{
         color: #D6634B;
     }
 
-    article p{
+    .blocflex__article p{
         margin: 10px;
         margin-bottom: 20px;
     }
+}
+
+.blocflex__galerie{
+    flex: 1 0 100%;    
 }
