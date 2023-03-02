@@ -1,7 +1,10 @@
 .site{
     margin: 0px; 
     width: 100%;
-    height: 100%;    
+    height: 100%;  
+    background-color: #ffffff; 
+    opacity: 1;
+    background-image: repeating-radial-gradient( circle at 0 0, transparent 0, #ffffff 17px ), repeating-linear-gradient( #dec6fb55, #dec6fb );  
 }
 
 .site__main{    
@@ -9,17 +12,8 @@
     padding-left: 40px;
     padding-right: 40px;
     padding-bottom: 30px;
-    background-color: #ffffff; 
-    opacity: 1;
-    background-image: repeating-radial-gradient( circle at 0 0, transparent 0, #ffffff 17px ), repeating-linear-gradient( #dec6fb55, #dec6fb );
-
 }
 
 h2{
     color: #07485B;
 }
-
-
-
-
-

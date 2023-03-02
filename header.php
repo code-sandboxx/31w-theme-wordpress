@@ -26,8 +26,14 @@
         <?php
         
         $category = get_queried_object();
+        if(isset($category)){
+            $lemenu = $category->slug; 
+        }
+        else {
+            $lemenu = "note-wp";
+        }
         wp_nav_menu(array(
-            "menu" => "cours",
+            "menu" => $lemenu, // permet de récupérer la catégorie de la page par défaut
             "container" => "nav"
         )); ?>
     </aside>
