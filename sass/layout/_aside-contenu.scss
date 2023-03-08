@@ -52,3 +52,19 @@ Mise en page avec display grid
        "footer footer";
     }
 }
+
+.no-aside{ // annule le asid
+   
+    grid-template-areas:
+      "header"     
+      "main"
+      "footer";
+    row-gap: 50px;
+    @media screen and (min-width: 1000px){ //configuration mobile
+       grid-template-columns: auto;  //configuration desktop
+       grid-template-areas:
+       "header"
+       "main"
+       "footer";
+    }
+}
