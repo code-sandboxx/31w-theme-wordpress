@@ -7,7 +7,6 @@ $titre = get_the_title();
 if(substr($titre, 0, 1) == "0"){} // a completer
 $sigle = substr($titre, 0, 7);
 $titre_long = substr($titre, 7, -5);
-$duree = "90h"; // a compléter
 ?>
 <article class="blocflex__article">
     <h5><a href="<?php the_permalink(); ?>"> <?= $sigle; ?></a></h5>   

@@ -64,11 +64,10 @@ add_theme_support( 'custom-logo',
             // Modifier la longueur du titre en fonction de vos besoins
            // $title = wp_trim_words($title, 3, ' ... ');
 
-            
             $sigle = substr($title, 4, 3); // a partir de 4 element, on garde juste 3 caractères
             $title = substr($title, 7);
-            $title = "<span class='cours_sigle'>" .$sigle. "</span>" . 
-                     "<span class='cours__titre'>" . wp_trim_words($title, 2, ' ... ') . "</span>";          
+            $title = "<span class='cours_sigle'>" .$sigle. "</span>" .
+                     "<span class='cours__titre'>". wp_trim_words($title, 2, ' ... ') . "</span>";          
         }
 
         else if($args->menu == 'note-wp') {
@@ -76,7 +75,7 @@ add_theme_support( 'custom-logo',
             $numero = substr($title, 0, 2); // a partir de 0 element, on garde juste 2 caractères 
             $title = substr($title, 2);           
             $title = "<span class='note__numero'>" .$numero. "</span>" . 
-                     "<span class='note__titre'>" . wp_trim_words($title, 2, ' ... ') . "</span>";          
+                     "<span class='note__titre'>". " " . wp_trim_words($title, 2, ' ... ') . "</span>";          
         }
 
         return  $title; // pour séparer le sigle / numero et le texte 
