@@ -378,7 +378,6 @@ hr {
   justify-content: space-between;
   align-items: center;
   background-color: #2b2b2b;
-  width: 100vw;
 }
 .logomenu a {
   padding-left: 40px;
@@ -394,6 +393,7 @@ hr {
   background-color: rgb(222, 198, 251);
 }
 .site__entete a {
+  white-space: nowrap;
   color: #6c3644;
   text-decoration: none;
 }
@@ -410,7 +410,6 @@ hr {
 .menu-entete-container .menu {
   display: flex;
   justify-content: space-evenly;
-  flex-wrap: wrap;
   list-style-type: none;
 }
 .menu-entete-container .menu .menu-item {
@@ -422,6 +421,26 @@ hr {
 }
 .menu-entete-container .menu .menu-item a:hover {
   color: #c0f9b7;
+}
+
+.menusearch {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  flex-direction: column-reverse;
+}
+@media screen and (min-width: 1000px) {
+  .menusearch {
+    flex: 1;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
+
+.recherche {
+  display: flex;
+  flex-wrap: nowrap;
 }
 
 .blocflex {
@@ -471,15 +490,17 @@ hr {
   flex: 1 0 100%;
 }
 
-.recherche {
+.main__recherche {
+  display: flex;
+  flex-wrap: nowrap;
   margin-right: 40px;
 }
-.recherche input[type=search] {
+.main__recherche input[type=search] {
   border-radius: 7px;
   background-color: #ffffff;
   padding: 5px;
 }
-.recherche button[type=submit] {
+.main__recherche button[type=submit] {
   padding: 5px;
   background-color: #c0f9b7;
   border-radius: 7px;
@@ -514,6 +535,31 @@ footer h3 {
   padding-bottom: 20px;
   margin-top: 0px;
   margin-bottom: 0px;
+}
+
+.menu-cours-container .menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 1000px) {
+  .menu-cours-container .menu {
+    flex-direction: column;
+  }
+}
+.menu-cours-container .menu .menu-item {
+  list-style-type: none;
+}
+.menu-cours-container .menu .menu-item a .cours__sigle {
+  padding: 3px;
+}
+.menu-cours-container .menu .menu-item a .cours__titre {
+  display: none;
+}
+@media screen and (min-width: 1000px) {
+  .menu-cours-container .menu .menu-item a .cours__titre {
+    display: block;
+  }
 }
 
 /* -------------------------- LAYOUT */

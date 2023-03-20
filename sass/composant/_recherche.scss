@@ -1,4 +1,6 @@
-.recherche{   
+.main__recherche{   
+    display: flex;
+    flex-wrap: nowrap;
     margin-right: 40px;  
     
     input[type="search"]{

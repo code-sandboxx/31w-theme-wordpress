@@ -58,12 +58,19 @@ add_theme_support( 'custom-logo',
     * @param $args: Object qui représente la structure de menu
     * */
     function perso_menu_item_title($title, $item, $args) {
+        
         // Remplacer 'nom_de_votre_menu' par l'identifiant de votre menu
         if($args->menu == 'cours') {
             // Modifier la longueur du titre en fonction de vos besoins
-            $title = wp_trim_words($title, 3, ' ... ');
+           // $title = wp_trim_words($title, 3, ' ... ');
+
+            
+            $sigle = substr($title, 4, 3); // a partir de 4 element, on garde juste 3 caractères
+            $title = substr($title, 7);
+            $title = "<div class='cours_sigle'>" .$sigle. "</div>" . 
+                     "<p class='cours__titre'>" . wp_trim_words($title, 2, ' ... ') . "</p>";          
         }
-        return $title;
+        return  $title; // pour séparer le sigle et le texte
     }
 
-    add_filter('nav_menu_item_title', 'perso_menu_item_title', 10, 3);   // 3 - nombre des paramètres, 10 - niveau de priorité
+   add_filter('nav_menu_item_title', 'perso_menu_item_title', 10, 3);   // 3 - nombre des paramètres, 10 - niveau de priorité
