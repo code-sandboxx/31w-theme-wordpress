@@ -562,6 +562,31 @@ footer h3 {
   }
 }
 
+.menu-note-wp-container .menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 1000px) {
+  .menu-note-wp-container .menu {
+    flex-direction: column;
+  }
+}
+.menu-note-wp-container .menu .menu-item {
+  list-style-type: none;
+}
+.menu-note-wp-container .menu .menu-item a .note__numero {
+  padding: 3px;
+}
+.menu-note-wp-container .menu .menu-item a .note__titre {
+  display: none;
+}
+@media screen and (min-width: 1000px) {
+  .menu-note-wp-container .menu .menu-item a .note__titre {
+    display: block;
+  }
+}
+
 /* -------------------------- LAYOUT */
 /**
 Mise en page avec display grid

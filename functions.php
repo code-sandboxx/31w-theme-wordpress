@@ -67,10 +67,19 @@ add_theme_support( 'custom-logo',
             
             $sigle = substr($title, 4, 3); // a partir de 4 element, on garde juste 3 caractères
             $title = substr($title, 7);
-            $title = "<div class='cours_sigle'>" .$sigle. "</div>" . 
-                     "<p class='cours__titre'>" . wp_trim_words($title, 2, ' ... ') . "</p>";          
+            $title = "<span class='cours_sigle'>" .$sigle. "</span>" . 
+                     "<span class='cours__titre'>" . wp_trim_words($title, 2, ' ... ') . "</span>";          
         }
-        return  $title; // pour séparer le sigle et le texte
+
+        else if($args->menu == 'note-wp') {
+        
+            $numero = substr($title, 0, 2); // a partir de 0 element, on garde juste 2 caractères 
+            $title = substr($title, 2);           
+            $title = "<span class='note__numero'>" .$numero. "</span>" . 
+                     "<span class='note__titre'>" . wp_trim_words($title, 2, ' ... ') . "</span>";          
+        }
+
+        return  $title; // pour séparer le sigle / numero et le texte 
     }
 
    add_filter('nav_menu_item_title', 'perso_menu_item_title', 10, 3);   // 3 - nombre des paramètres, 10 - niveau de priorité
