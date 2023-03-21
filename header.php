@@ -8,14 +8,25 @@
     <?php wp_head(); ?> 
 </head>
 <body class="site <?= (is_front_page() ? "no-aside" : "");?>"> 
+
     <header class="site__entete">
         <section class="logomenu">
-            <?php the_custom_logo(); ?>
-            <?php wp_nav_menu(array( // ajout de menu de navigation
-                'menu' => 'entete',
-                'container' => 'nav'
-            )); ?>   
-            <?=get_search_form(); //  formulaire de recherche intégré?> 
+            <div class="menusearch">
+
+                <input type="checkbox" id="chkBurger">
+                <?php the_custom_logo(); ?>
+                <?php wp_nav_menu(array( // ajout de menu de navigation
+                    'menu' => 'entete',
+                    'container' => 'nav'
+                )); ?>   
+
+                <?= get_search_form(); ?>
+
+                <label for="chkBurger">
+                    <img src="https://s2.svgbox.net/hero-outline.svg?ic=menu&color=000" width="32" height="32">                    
+                </label>   
+                 
+            </div>
         </section>
 
         <h1><a href="<?php bloginfo('url');?>"><?php bloginfo('name');?></a></h1>       

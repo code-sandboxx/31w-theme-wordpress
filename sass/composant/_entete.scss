@@ -36,12 +36,23 @@
 }
 
 .menu-entete-container {      
+
     flex:1;
 
     .menu { //ul
-        display : flex;
-        justify-content: space-evenly;       
-        list-style-type: none;        
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-start;
+        list-style-type: none;
+
+        @media screen and (min-width: 400px){
+
+            flex-direction: row;
+            justify-content: space-evenly; 
+        }
+
     
         .menu-item { // li
                 flex : 1 0 50px;

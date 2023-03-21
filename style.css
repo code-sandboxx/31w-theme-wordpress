@@ -409,8 +409,16 @@ hr {
 }
 .menu-entete-container .menu {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
   list-style-type: none;
+}
+@media screen and (min-width: 400px) {
+  .menu-entete-container .menu {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
 }
 .menu-entete-container .menu .menu-item {
   flex: 1 0 50px;
