@@ -406,6 +406,13 @@ hr {
 
 .menu-entete-container {
   flex: 1;
+  transform: translateX(300px);
+  transition: transform 0.25s;
+}
+@media screen and (min-width: 500px) {
+  .menu-entete-container {
+    transform: translateX(0);
+  }
 }
 .menu-entete-container .menu {
   display: flex;
@@ -414,7 +421,7 @@ hr {
   justify-content: flex-start;
   list-style-type: none;
 }
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 500px) {
   .menu-entete-container .menu {
     flex-direction: row;
     justify-content: space-evenly;
@@ -449,6 +456,29 @@ hr {
 .recherche {
   display: flex;
   flex-wrap: nowrap;
+}
+
+#chkBurger {
+  display: none;
+}
+
+#chkBurger:checked ~ .menu-entete-container {
+  transform: translateX(0);
+}
+
+.burger {
+  display: block;
+  width: 70px;
+}
+@media screen and (min-width: 500px) {
+  .burger {
+    display: none;
+  }
+}
+
+.burger img {
+  width: 100%;
+  object-fit: contain;
 }
 
 .blocflex {
@@ -631,6 +661,8 @@ Mise en page avec display grid
 
 /*body ou un conteneur globale */
 .site {
+  width: 100vw;
+  overflow-x: hidden;
   display: grid;
   grid-template-columns: auto;
   grid-template-areas: "header" "aside" "main" "footer";

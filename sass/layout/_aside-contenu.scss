@@ -36,6 +36,8 @@ Mise en page avec display grid
 
 /*body ou un conteneur globale */
 .site {
+    width : 100vw;
+    overflow-x :hidden;
     display: grid;
     grid-template-columns: auto;
     grid-template-areas:

@@ -38,6 +38,11 @@
 .menu-entete-container {      
 
     flex:1;
+    transform : translateX(300px);
+    transition : transform .25s;
+    @media screen and (min-width: 500px) {
+        transform : translateX(0);  
+    }
 
     .menu { //ul
 
@@ -47,7 +52,7 @@
         justify-content: flex-start;
         list-style-type: none;
 
-        @media screen and (min-width: 400px){
+        @media screen and (min-width: 500px){
 
             flex-direction: row;
             justify-content: space-evenly; 
@@ -86,4 +91,27 @@
 .recherche {
     display: flex;
     flex-wrap: nowrap;    
+}
+
+#chkBurger {
+    display : none;
+}
+
+#chkBurger:checked ~ .menu-entete-container {
+    transform : translateX(0);
+}
+
+.burger {
+
+    display : block;
+    width: 70px;
+
+    @media screen and (min-width: 500px) {
+        display: none;    
+    }
+}
+
+.burger img{
+    width: 100%;
+    object-fit: contain;
 }
