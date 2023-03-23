@@ -1,12 +1,11 @@
 .main__recherche{   
     display: flex;
     flex-wrap: nowrap;
-    margin-right: 40px;  
-    
+
     input[type="search"]{
-    border-radius: 7px;
-    background-color:#ffffff;
-    padding: 5px;
+        border-radius: 7px;
+        background-color:#ffffff;
+        padding: 5px;
     }
 
     button[type="submit"] {

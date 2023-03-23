@@ -1,44 +1,55 @@
 .logomenu{
+   
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    background-color: #2b2b2b;    
+    align-items: flex-start;
+    background-color: #2b2b2b;  
+    
+    @media screen and (min-width: 500px) {
+        align-items: center;
+        padding: 50px;
+    }
  
-    a {
-        padding-left: 40px;
-    } 
-
-    img {
+    .custom-logo-link img{
         width: 80px;
         height: 80px;
         object-fit: cover;
     }
 }
 
+.custom-logo-link{
 
-.site__entete{
-  padding-bottom: 30px;
+    margin-left: 5px;
+    margin-top: 5px;
+   
+    @media screen and (min-width: 500px) {
+       position: inherit;
+    }
+}
+
+.site__entete{  
   background-color: rgb(222, 198, 251);
     
   a{
     white-space: nowrap;
-    color: #6c3644;
+    
     text-decoration: none;
    }
 
-   h2{
-    margin-bottom: 25px;    
-   }
-
    h1, h2{
-    margin-left: 40px;
+    margin: 5px;
+    color: #743444;    
+
+        @media screen and (min-width: 500px) {
+            margin: 25px;
+        }
    }
 }
 
 .menu-entete-container {      
 
     flex:1;
-    transform : translateX(300px);
+    transform : translateX(100%);
     transition : transform .25s;
     @media screen and (min-width: 500px) {
         transform : translateX(0);  
@@ -80,17 +91,26 @@
     justify-content: flex-start;
     align-items: flex-end;
     flex-direction: column-reverse;
+    padding: 8px;
+    
     @media screen and (min-width:1000px){
         flex: 1;
         flex-direction: row;
         align-items: center;
-        justify-content: flex-end;
+        justify-content: flex-end;     
+        margin-left: 60px;   
     }
 }
 
 .recherche {
     display: flex;
     flex-wrap: nowrap;    
+    align-self: center;
+    margin-top: 50px;
+
+    @media screen and (min-width:1000px){
+        margin-top: 0;
+    }
 }
 
 #chkBurger {
@@ -103,15 +123,9 @@
 
 .burger {
 
-    display : block;
-    width: 70px;
+    display : block;    
 
     @media screen and (min-width: 500px) {
         display: none;    
     }
-}
-
-.burger img{
-    width: 100%;
-    object-fit: contain;
 }

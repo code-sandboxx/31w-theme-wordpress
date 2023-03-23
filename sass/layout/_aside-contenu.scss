@@ -5,12 +5,14 @@ Mise en page avec display grid
 .site__entete {
     grid-area: header; // pas de ""
    // padding: 1rem clamp(1rem, 3vw, 20rem);
-    background-color: #dec6fb;
+   // background-color: #dec6fb;
+    background-color: transparent;
     left: 0;
     right: 0;
 }
   
 .site__main {
+    background-color: rgba(227, 197, 229, 0.7);    
     grid-area: main;
     overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
   }

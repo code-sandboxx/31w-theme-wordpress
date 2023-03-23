@@ -11,5 +11,6 @@ $duree = substr($titre, -4, 3); // a compléter
 <article class = "blocflex__article">
     <h5><a href="<?php the_permalink(); ?>"> <?= $sigle; ?></a></h5>   
     <p><?= wp_trim_words(get_the_excerpt(), 15) ?></p>
+    <p><?php the_field('enseignant'); ?> </p>
     <p><?= $duree; ?></p>
 </article>
