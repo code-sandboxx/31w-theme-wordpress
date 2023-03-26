@@ -12,5 +12,5 @@ $duree = substr($titre, -4, 3); // a compléter
     <h5><a href="<?php the_permalink(); ?>"> <?= $sigle; ?></a></h5>   
     <p><?= wp_trim_words(get_the_excerpt(), 15) ?></p>
     <p><?php the_field('enseignant'); // normal si soulignée - la fonction se trouve pas dans notre WP ?> </p> 
-    <p><?= $duree; ?></p>
+    <p class="duree"><?= $duree; ?></p>
 </article>

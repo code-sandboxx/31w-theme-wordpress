@@ -516,6 +516,8 @@ hr {
   }
 }
 .blocflex .blocflex__article {
+  display: flex;
+  flex-direction: column;
   margin: 10px;
   padding: 5px;
   border-radius: 30px;
@@ -542,20 +544,28 @@ hr {
   border: 1px solid rgb(255, 255, 255);
 }
 .blocflex .blocflex__article a {
-  margin: 10px 20px 10px 20px;
+  margin: 10px;
   text-decoration: none;
-  color: #07485B;
+  font-family: var(--policeSecondaire);
+  font-weight: 600;
+  font-size: 16px;
+  color: rgb(5, 32, 13);
+  text-transform: uppercase;
 }
 .blocflex .blocflex__article a:hover {
   color: #D6634B;
 }
 .blocflex .blocflex__article p {
   margin: 10px;
-  margin-bottom: 20px;
 }
 
 .blocflex__galerie {
   flex: 1 0 100%;
+}
+
+.duree {
+  left: 0;
+  bottom: 0;
 }
 
 .main__recherche {
