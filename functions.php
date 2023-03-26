@@ -77,7 +77,7 @@ add_theme_support('custom-background');
             $sigle = substr($title, 4, 3); // a partir de 4 element, on garde juste 3 caractères
             $title = substr($title, 7);
             $title = "<span class='cours__sigle'>" .$sigle. "</span>" .
-                     "<span class='cours__titre'>". wp_trim_words($title, 2, ' ... ') . "</span>";          
+                     "<span class='cours__titre'>". "  " . wp_trim_words($title, 2, ' ... ') . "</span>";          
         }        
 
         else if($args->menu == 'note-wp') {

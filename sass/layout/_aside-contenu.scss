@@ -25,16 +25,29 @@ Mise en page avec display grid
 
 .site__aside {
     grid-area: aside;
-    background-color: rgb(203, 249, 183);
-    border-top-right-radius: 30px;
-    border-bottom-right-radius: 30px;
+    border-radius: 30px;
+    margin: 0px 30px 0 30px;
     box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
     padding: 20px;
-    justify-content: end;
-    
+    background-color: rgb(203, 249, 183);
+
+    @media screen and (min-width: 1000px){    
+        border-top-right-radius: 30px;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 30px;    
+        justify-content: end;  
+        min-height: fit-content;
+        margin: 0 30px 0 0;
+    }
+
     h3{
         text-align: center;
-        margin-top: 30px;
+        margin: 30px;
+        font-family: var(--policeSecondaire);
+        font-weight: 600;
+        color: rgb(5, 32, 13);
+        text-transform: uppercase;
     }
 }
 
@@ -50,7 +63,7 @@ Mise en page avec display grid
       "footer";
     row-gap: 50px;
     @media screen and (min-width: 1000px){ //configuration mobile
-       grid-template-columns: 30% auto;  //configuration desktop
+       grid-template-columns: 25% 75%;  //configuration desktop
        grid-template-areas:
        "header header"
        "aside main"

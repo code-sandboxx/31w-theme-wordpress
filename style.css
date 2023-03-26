@@ -615,6 +615,16 @@ footer h3 {
 .menu-cours-container .menu .menu-item,
 .menu-note-wp-container .menu .menu-item {
   list-style-type: none;
+  padding: 5px;
+  color: #2c1845;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.menu-cours-container .menu .menu-item a,
+.menu-note-wp-container .menu .menu-item a {
+  font-family: var(--policeSecondaire);
+  font-weight: 600;
+  text-decoration: none;
 }
 .menu-cours-container .menu .menu-item a .cours__sigle,
 .menu-note-wp-container .menu .menu-item a .cours__sigle {
@@ -630,6 +640,16 @@ footer h3 {
     display: inline;
   }
 }
+.menu-cours-container .menu .menu-item:hover,
+.menu-note-wp-container .menu .menu-item:hover {
+  background-color: rgba(227, 197, 229, 0.7);
+  transform: translateY(-5%);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+.menu-cours-container .menu .menu-item:hover a,
+.menu-note-wp-container .menu .menu-item:hover a {
+  color: rgb(5, 32, 13);
+}
 
 .menu-note-wp-container .menu {
   display: flex;
@@ -643,7 +663,9 @@ footer h3 {
 }
 .menu-note-wp-container .menu .menu-item {
   list-style-type: none;
-  margin: 5px 0px 5px 0px;
+  padding: 5px;
+  color: #2c1845;
+  border-radius: 5px;
 }
 .menu-note-wp-container .menu .menu-item a {
   font-family: var(--policeSecondaire);
@@ -660,6 +682,14 @@ footer h3 {
   .menu-note-wp-container .menu .menu-item a .note__titre {
     display: inline;
   }
+}
+.menu-note-wp-container .menu .menu-item:hover {
+  background-color: rgba(227, 197, 229, 0.7);
+  transform: translateY(-5%);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+.menu-note-wp-container .menu .menu-item:hover a {
+  color: rgb(5, 32, 13);
 }
 
 /* -------------------------- LAYOUT */
@@ -687,16 +717,30 @@ Mise en page avec display grid
 
 .site__aside {
   grid-area: aside;
-  background-color: rgb(203, 249, 183);
-  border-top-right-radius: 30px;
-  border-bottom-right-radius: 30px;
+  border-radius: 30px;
+  margin: 0px 30px 0 30px;
   box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
   padding: 20px;
-  justify-content: end;
+  background-color: rgb(203, 249, 183);
+}
+@media screen and (min-width: 1000px) {
+  .site__aside {
+    border-top-right-radius: 30px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 30px;
+    justify-content: end;
+    min-height: fit-content;
+    margin: 0 30px 0 0;
+  }
 }
 .site__aside h3 {
   text-align: center;
-  margin-top: 30px;
+  margin: 30px;
+  font-family: var(--policeSecondaire);
+  font-weight: 600;
+  color: rgb(5, 32, 13);
+  text-transform: uppercase;
 }
 
 /*body ou un conteneur globale */
@@ -709,7 +753,7 @@ Mise en page avec display grid
 }
 @media screen and (min-width: 1000px) {
   .site {
-    grid-template-columns: 30% auto;
+    grid-template-columns: 25% 75%;
     grid-template-areas: "header header" "aside main" "footer footer";
   }
 }

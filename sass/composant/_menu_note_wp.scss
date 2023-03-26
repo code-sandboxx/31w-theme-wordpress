@@ -11,7 +11,9 @@
         .menu-item{ //li
 
             list-style-type: none;     
-            margin: 5px 0px 5px 0px;    
+            padding: 5px;   
+            color: #2c1845; 
+            border-radius: 5px;
 
             a {
                 font-family: var(--policeSecondaire);
@@ -29,6 +31,14 @@
                     }
                 }
             }
+        }
+        .menu-item:hover{
+            background-color: rgba(227, 197, 229, 0.7);
+            transform: translateY(-5%);           
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px; 
+            a{
+                color: rgb(5, 32, 13);                
+            }            
         }
     }
 }
