@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*
 Theme Name: 31w-olena
-Theme URI: https://github.com/code-sandboxx/31w-theme-wordpress/tree/exer2
+Theme URI: https://github.com/code-sandboxx/31w-theme-wordpress/tree/exer3
 Author: Olena K
 Author URI: Olena K
 Description: Introduction à la création d'un thème Wordpress
@@ -360,10 +360,6 @@ em, i {
   color: rgb(45, 3, 3);
 }
 
-a {
-  color: blueviolet;
-}
-
 code {
   color: red;
 }
@@ -406,7 +402,7 @@ hr {
 }
 
 .site__entete {
-  background-color: rgb(222, 198, 251);
+  background-color: var(--lightPurple);
 }
 .site__entete a {
   white-space: nowrap;
@@ -446,7 +442,7 @@ hr {
   }
 }
 .menu-entete-container .menu .menu-item a {
-  color: #dec6fb;
+  color: var(--lightPurple);
   font-family: var(--policeSecondaire);
   font-weight: 600;
   text-transform: uppercase;
@@ -454,7 +450,7 @@ hr {
   transition: color 0.5s ease;
 }
 .menu-entete-container .menu .menu-item a:hover {
-  color: #c0f9b7;
+  color: var(--lightGreen);
 }
 
 .menusearch {
@@ -532,11 +528,13 @@ hr {
 @media screen and (min-width: 675px) {
   .blocflex .blocflex__article {
     flex: 1 0 300px;
+    padding: 20px;
+    margin: 10px;
   }
 }
 .blocflex .blocflex__article:hover {
   transform: scale(1.1);
-  background: rgba(203, 249, 183, 0.7);
+  background: var(--lightGreen);
   border-radius: 30px;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
   backdrop-filter: blur(3.4px);
@@ -544,19 +542,18 @@ hr {
   border: 1px solid rgb(255, 255, 255);
 }
 .blocflex .blocflex__article a {
-  margin: 10px;
   text-decoration: none;
   font-family: var(--policeSecondaire);
   font-weight: 600;
   font-size: 16px;
-  color: rgb(5, 32, 13);
+  color: var(--darkGreen);
   text-transform: uppercase;
 }
-.blocflex .blocflex__article a:hover {
-  color: #D6634B;
+.blocflex .blocflex__article a:visited {
+  text-decoration: none;
 }
-.blocflex .blocflex__article p {
-  margin: 10px;
+.blocflex .blocflex__article a:hover {
+  color: var(--orange);
 }
 
 .blocflex__galerie {
@@ -566,6 +563,22 @@ hr {
 .duree {
   left: 0;
   bottom: 0;
+  font-family: var(--policePrimaire);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--darkPurple);
+}
+
+.champ__enseignant, .champ__domaine {
+  font-family: var(--policeSecondaire);
+  font-size: 14px;
+  color: rgb(70, 35, 35);
+}
+
+.acf {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .main__recherche {
@@ -583,7 +596,7 @@ hr {
 
 .recherche__bouton[type=submit] {
   padding: 7px;
-  background-color: #c0f9b7;
+  background-color: var(--lightGreen);
   border-top-right-radius: 7px;
   border-bottom-right-radius: 7px;
   border-style: none;
@@ -617,7 +630,7 @@ footer {
   padding: 30px 30px 10px 30px;
 }
 footer h2 {
-  color: rgb(222, 198, 251);
+  color: var(--lightPurple);
   font-style: var(--policeSecondaire);
   font-size: 16px;
   text-align: center;
@@ -639,7 +652,6 @@ footer h2 {
 .menu-note-wp-container .menu .menu-item {
   list-style-type: none;
   padding: 5px;
-  color: #2c1845;
   border-radius: 5px;
   transition: 0.3s;
 }
@@ -648,6 +660,7 @@ footer h2 {
   font-family: var(--policeSecondaire);
   font-weight: 600;
   text-decoration: none;
+  color: var(--darkPurple);
 }
 .menu-cours-container .menu .menu-item a .cours__sigle,
 .menu-note-wp-container .menu .menu-item a .cours__sigle {
@@ -663,6 +676,11 @@ footer h2 {
     display: inline;
   }
 }
+.menu-cours-container .menu .menu-item a:visited,
+.menu-note-wp-container .menu .menu-item a:visited {
+  text-decoration: none;
+  color: var(--darkPurple);
+}
 .menu-cours-container .menu .menu-item:hover,
 .menu-note-wp-container .menu .menu-item:hover {
   background-color: rgba(227, 197, 229, 0.7);
@@ -671,7 +689,7 @@ footer h2 {
 }
 .menu-cours-container .menu .menu-item:hover a,
 .menu-note-wp-container .menu .menu-item:hover a {
-  color: rgb(5, 32, 13);
+  color: var(--darkGreen);
 }
 
 .menu-note-wp-container .menu {
@@ -687,13 +705,13 @@ footer h2 {
 .menu-note-wp-container .menu .menu-item {
   list-style-type: none;
   padding: 5px;
-  color: #2c1845;
   border-radius: 5px;
 }
 .menu-note-wp-container .menu .menu-item a {
   font-family: var(--policeSecondaire);
   font-weight: 600;
   text-decoration: none;
+  color: var(--darkPurple);
 }
 .menu-note-wp-container .menu .menu-item a .note__numero {
   padding: 3px;
@@ -706,13 +724,17 @@ footer h2 {
     display: inline;
   }
 }
+.menu-note-wp-container .menu .menu-item a:visited {
+  text-decoration: none;
+  color: var(--darkPurple);
+}
 .menu-note-wp-container .menu .menu-item:hover {
   background-color: rgba(227, 197, 229, 0.7);
   transform: translateY(-5%);
   box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
 }
 .menu-note-wp-container .menu .menu-item:hover a {
-  color: rgb(5, 32, 13);
+  color: var(--darkGreen);
 }
 
 /* -------------------------- LAYOUT */
@@ -744,7 +766,7 @@ Mise en page avec display grid
   margin: 0px 30px 0 30px;
   box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
   padding: 20px;
-  background-color: rgb(203, 249, 183);
+  background-color: var(--lightGreen);
 }
 @media screen and (min-width: 1000px) {
   .site__aside {
@@ -797,4 +819,9 @@ Mise en page avec display grid
 :root {
   --policePrimaire: "Poppins", sans-serif;
   --policeSecondaire: "Comfortaa", sans-serif;
+  --darkGreen: rgb(17, 65, 31);
+  --darkPurple: #6b489a;
+  --lightPurple: rgba(227, 197, 229, 0.7);
+  --orange: #D6634B;
+  --lightGreen: rgba(203, 249, 183, 0.7);
 }/*# sourceMappingURL=style.css.map */

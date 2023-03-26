@@ -23,13 +23,15 @@
         border: 1px solid rgba(255, 255, 255, 0.8);   
            
         @media screen and (min-width: 675px){
-            flex: 1 0 300px;                       
+            flex: 1 0 300px;  
+            padding: 20px;  
+            margin: 10px;                   
         }  
     }
 
     .blocflex__article:hover{
         transform: scale(1.1);
-        background: rgba(203, 249, 183, 0.7);
+        background: var(--lightGreen);
         border-radius: 30px;
         box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
         backdrop-filter: blur(3.4px);
@@ -37,22 +39,21 @@
         border: 1px solid rgba(255, 255, 255, 1);
     }
 
-    .blocflex__article a{
-        margin: 10px;
+    .blocflex__article a{        
         text-decoration: none;        
         font-family: var(--policeSecondaire);
         font-weight: 600;
         font-size: 16px;
-        color: rgb(5, 32, 13);
+        color: var(--darkGreen);
         text-transform: uppercase
     }
 
-    .blocflex__article a:hover{
-        color: #D6634B;
+    .blocflex__article a:visited{
+        text-decoration: none;
     }
 
-    .blocflex__article p{
-        margin: 10px;       
+    .blocflex__article a:hover{
+        color: var(--orange);
     }
 }
 
@@ -63,4 +64,20 @@
 .duree{    
     left: 0;
     bottom: 0;
+    font-family: var(--policePrimaire);
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--darkPurple);
+}
+
+.champ__enseignant, .champ__domaine{
+    font-family: var(--policeSecondaire);
+    font-size: 14px;
+    color: rgb(70, 35, 35);
+}
+
+.acf{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }

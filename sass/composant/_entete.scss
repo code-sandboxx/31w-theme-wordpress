@@ -28,7 +28,7 @@
 }
 
 .site__entete{  
-  background-color: rgb(222, 198, 251);
+  background-color: var(--lightPurple);
     
   a{
     white-space: nowrap;    
@@ -72,7 +72,7 @@
         .menu-item { // li
         
             a{              
-                color : #dec6fb;
+                color: var(--lightPurple);
                 font-family: var(--policeSecondaire);
                 font-weight: 600;
                 text-transform: uppercase;
@@ -81,7 +81,7 @@
             }
 
             a:hover {
-                color : #c0f9b7;                              
+                color : var(--lightGreen);                              
             }  
         }    
     }       
