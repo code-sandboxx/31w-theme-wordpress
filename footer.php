@@ -4,7 +4,7 @@
  */
 ?>
 <footer class = "site__footer">
-<h3>Pied de page</h3>
+<h2>Copyright &#169 2023 | Thème Wordpress 31-W | Tous droits réservés</h2>
 </footer>
 <?php wp_footer(); ?> 
 </body>
