@@ -75,6 +75,10 @@
         
             a{              
                 color : #dec6fb;
+                font-family: var(--policeSecondaire);
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 0.1rem;
                 transition: color 0.5s ease;
             }
 

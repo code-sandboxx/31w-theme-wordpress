@@ -10,9 +10,14 @@
 
         .menu-item{ //li
 
-            list-style-type: none;            
+            list-style-type: none;     
+            margin: 5px 0px 5px 0px;    
 
             a {
+                font-family: var(--policeSecondaire);
+                font-weight: 600;       
+                text-decoration: none;
+                
                 .note__numero{
                     padding: 3px;
                 }

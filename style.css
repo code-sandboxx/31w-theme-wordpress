@@ -450,6 +450,10 @@ hr {
 }
 .menu-entete-container .menu .menu-item a {
   color: #dec6fb;
+  font-family: var(--policeSecondaire);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
   transition: color 0.5s ease;
 }
 .menu-entete-container .menu .menu-item a:hover {
@@ -571,6 +575,7 @@ hr {
   background-color: #ffffff;
   opacity: 1;
   background-image: repeating-radial-gradient(circle at 0 0, transparent 0, #ffffff 17px), repeating-linear-gradient(rgba(222, 198, 251, 0.3333333333), #dec6fb);
+  font-family: var(--policePrimaire);
 }
 
 .site__main {
@@ -638,6 +643,12 @@ footer h3 {
 }
 .menu-note-wp-container .menu .menu-item {
   list-style-type: none;
+  margin: 5px 0px 5px 0px;
+}
+.menu-note-wp-container .menu .menu-item a {
+  font-family: var(--policeSecondaire);
+  font-weight: 600;
+  text-decoration: none;
 }
 .menu-note-wp-container .menu .menu-item a .note__numero {
   padding: 3px;
@@ -680,6 +691,7 @@ Mise en page avec display grid
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
   box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+  padding: 20px;
   justify-content: end;
 }
 .site__aside h3 {
@@ -711,4 +723,10 @@ Mise en page avec display grid
     grid-template-columns: auto;
     grid-template-areas: "header" "main" "footer";
   }
+}
+
+/* -------------------------- VARIABLE */
+:root {
+  --policePrimaire: "Poppins", sans-serif;
+  --policeSecondaire: "Comfortaa", sans-serif;
 }/*# sourceMappingURL=style.css.map */

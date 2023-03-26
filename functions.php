@@ -8,6 +8,15 @@ function ajouter_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'ajouter_styles' );
 
+/* ------------------ Add_Google Fonts -------------------------- */
+function wpb_add_google_fonts() {   
+                                     wp_enqueue_style( 'wpb-google-fonts', 
+                                                        '<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;600;700&family=Poppins:wght@300;600;900&display=swap" rel="stylesheet">', 
+                                                        false );    
+                                }   
+add_action( 'wp_enqueue_scripts', 'wpb_add_google_fonts' );
+
+
 /* ------------------ Add_theme_support -------------------------- */
 add_theme_support( 'html5', 
                     array(  'search-form',                            
@@ -69,23 +78,20 @@ add_theme_support('custom-background');
             $title = substr($title, 7);
             $title = "<span class='cours__sigle'>" .$sigle. "</span>" .
                      "<span class='cours__titre'>". wp_trim_words($title, 2, ' ... ') . "</span>";          
-        }
-
-        
+        }        
 
         else if($args->menu == 'note-wp') {
+            $numero = substr($title, 0, 2); 
+            $title = substr($title, 2); 
         
-            $numero = substr($title, 0, 2); // a partir de 0 element, on garde juste 2 caractères 
-            $title = substr($title, 2);           
+            if(substr($numero, 0, 1) == '0'){ 
+                $numero = substr($numero, 1, 1); 
+            }
+                      
             $title = "<span class='note__numero'>" .$numero. "</span>" . 
-                     "<span class='note__titre'>". " " . wp_trim_words($title, 2, ' ... ') . "</span>";          
+                     "<span class='note__titre'>". " - " . substr($title, 1) . "</span>";          
         }
-
-        else if($args->menu == 'note-wp'){
-            if(substr($title, 0, 1) == '0')
-            {$title = substr($title, 1);}
-        }
-
+               
         return  $title; // pour séparer le sigle / numero et le texte 
     }
 
