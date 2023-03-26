@@ -32,8 +32,13 @@
             </div>
         </section>
 
-        <h1><a href="<?php bloginfo('url');?>"><?php bloginfo('name');?></a></h1>       
-        <h2><?php bloginfo('description');?></h2>
+        <?php 
+        $classe = "";
+        if(is_front_page() == false){$classe = "invisible";}
+        ?> 
+               
+        <h1 class="site__titre <?= $classe ?>"><a href="<?php bloginfo('url');?>"><?php bloginfo('name');?></a></h1>       
+        <h2 class="sous__soustitre <?= $classe ?>"><?php bloginfo('description');?></h2>
     </header> 
     <?php if(is_front_page() == false){
         get_template_part("template-parts/aside");

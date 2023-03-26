@@ -372,12 +372,16 @@ hr {
   border-top: 1px dotted rgb(18, 53, 178);
 }
 
+.invisible {
+  display: none;
+}
+
 /* -------------------------- COMPOSANT */
 .logomenu {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  background-color: #2b2b2b;
+  background-color: rgba(0, 0, 0, 0.9);
 }
 @media screen and (min-width: 500px) {
   .logomenu {
@@ -508,11 +512,10 @@ hr {
 .blocflex .blocflex__article {
   margin: 10px;
   padding: 5px;
-  background-color: rgba(255, 255, 255, 0.4);
   border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0.4);
   flex: 1 0 300px;
   transition: 0.3s;
-  background: rgba(255, 255, 255, 0.05);
   border-radius: 16px;
   box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
   backdrop-filter: blur(3px);
@@ -571,10 +574,11 @@ hr {
 }
 
 .site__main {
-  margin-top: 0px;
   padding-left: 40px;
   padding-right: 40px;
   padding-bottom: 30px;
+  border-radius: 30px;
+  margin: 0px 30px 0 30px;
 }
 
 h2 {
@@ -591,27 +595,33 @@ footer h3 {
   margin-bottom: 0px;
 }
 
-.menu-cours-container .menu {
+.menu-cours-container .menu,
+.menu-note-wp-container .menu {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 @media screen and (min-width: 1000px) {
-  .menu-cours-container .menu {
+  .menu-cours-container .menu,
+  .menu-note-wp-container .menu {
     flex-direction: column;
   }
 }
-.menu-cours-container .menu .menu-item {
+.menu-cours-container .menu .menu-item,
+.menu-note-wp-container .menu .menu-item {
   list-style-type: none;
 }
-.menu-cours-container .menu .menu-item a .cours__sigle {
+.menu-cours-container .menu .menu-item a .cours__sigle,
+.menu-note-wp-container .menu .menu-item a .cours__sigle {
   padding: 3px;
 }
-.menu-cours-container .menu .menu-item a .cours__titre {
+.menu-cours-container .menu .menu-item a .cours__titre,
+.menu-note-wp-container .menu .menu-item a .cours__titre {
   display: none;
 }
 @media screen and (min-width: 1000px) {
-  .menu-cours-container .menu .menu-item a .cours__titre {
+  .menu-cours-container .menu .menu-item a .cours__titre,
+  .menu-note-wp-container .menu .menu-item a .cours__titre {
     display: inline;
   }
 }
@@ -656,6 +666,7 @@ Mise en page avec display grid
   background-color: rgba(227, 197, 229, 0.7);
   grid-area: main;
   overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
+  padding-top: 30px;
 }
 
 .site__footer {
@@ -678,7 +689,6 @@ Mise en page avec display grid
 
 /*body ou un conteneur globale */
 .site {
-  width: 100vw;
   overflow-x: hidden;
   display: grid;
   grid-template-columns: auto;
