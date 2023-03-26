@@ -1,16 +1,20 @@
 .main__recherche{   
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: nowrap;   
+}
 
-    input[type="search"]{
-        border-radius: 7px;
-        background-color:#ffffff;
-        padding: 5px;
-    }
+.recherche__input[type="search"] {    
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    background-color:#ffffff;
+    padding: 7px;
+    border-style: none;
+}
 
-    button[type="submit"] {
-        padding: 5px;
-        background-color: #c0f9b7;
-        border-radius: 7px;
-    }
+.recherche__bouton[type="submit"]{
+    padding: 7px;
+    background-color: #c0f9b7;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    border-style: none;
 }

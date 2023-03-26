@@ -2,21 +2,27 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-left: 40px;
-    margin-right: 40px;
+    margin: 0;
+    @media screen and (min-width: 675px){
+        margin-left: 40px;
+        margin-right: 40px;                     
+    }  
     
     .blocflex__article{
         margin: 10px;
         padding: 5px;
         border-radius: 30px;
-        background-color: rgba($color: #ffffff, $alpha: 0.4);
-        flex: 1 0 300px;        
+        background-color: rgba($color: #ffffff, $alpha: 0.4);                
         transition: 0.3s;          
         border-radius: 16px;
         box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
         backdrop-filter: blur(3px);
         -webkit-backdrop-filter: blur(3px);
-        border: 1px solid rgba(255, 255, 255, 0.8);        
+        border: 1px solid rgba(255, 255, 255, 0.8);   
+           
+        @media screen and (min-width: 675px){
+            flex: 1 0 300px;                       
+        }  
     }
 
     .blocflex__article:hover{
