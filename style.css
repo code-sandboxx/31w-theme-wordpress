@@ -577,8 +577,13 @@ hr {
 
 .acf {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
+}
+@media screen and (min-width: 675px) {
+  .acf {
+    flex-direction: row;
+  }
 }
 
 .main__recherche {
