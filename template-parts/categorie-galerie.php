@@ -7,6 +7,6 @@
 ?>
 <article class="blocflex__galerie">
       
-   <?php the_content(); ?>
+   <?php the_content(); // affiche le contenu de l'article - pas de titre?>
 
 </article>

@@ -625,15 +625,28 @@ h2 {
   color: #07485B;
 }
 
-footer {
+.site__footer {
+  display: flex;
+  flex-direction: column;
   background-color: #2b2b2b;
   padding: 30px 30px 10px 30px;
 }
-footer h2 {
+.site__footer h2 {
   color: var(--lightPurple);
   font-style: var(--policeSecondaire);
   font-size: 16px;
   text-align: center;
+}
+.site__footer .footer__widget {
+  display: flex;
+  flex-direction: row;
+}
+.site__footer .footer__widget div {
+  flex: 1 0 30%;
+  margin: 10px;
+}
+.site__footer .footer__lien div {
+  flex: 1 0 33%;
 }
 
 .menu-cours-container .menu,

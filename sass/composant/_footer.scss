@@ -1,4 +1,6 @@
-footer {
+.site__footer {
+    display: flex;
+    flex-direction: column;
     background-color: #2b2b2b;   
     padding: 30px 30px 10px 30px;    
   
@@ -7,5 +9,20 @@ footer {
         font-style: var(--policeSecondaire);
         font-size: 16px;
         text-align: center;
+    }
+
+    .footer__widget{
+        display: flex;
+        flex-direction: row;
+        div{
+            flex: 1 0 30%;
+            margin: 10px;
+        }
+    }
+
+    .footer__lien{
+        div{
+            flex: 1 0 33%;
+        }
     }
 }

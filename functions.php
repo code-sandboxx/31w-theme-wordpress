@@ -53,13 +53,15 @@ add_theme_support('custom-background');
     function cidweb_modifie_requete_principal( $query ) {
         if ( $query->is_home() // si page d'accueil
             && $query->is_main_query()// si requête principale
-            && ! is_admin() ) { // non tableu de bord
-            $query->set( 'category_name', 'note-wp' ); // filtre les articles de categorie "note-wp"
+            && ! is_admin() ) { // non tableau de bord
+            $query->set( 'category_name', 'note-wp' ); // filtre les articles de catégorie "note-wp"
             $query->set( 'orderby', 'title' ); // trie selon le titre
             $query->set( 'order', 'ASC' ); // ordre ascendant
         }
     }
-     add_action( 'pre_get_posts', 'cidweb_modifie_requete_principal' ); // = event listener
+
+    add_action( 'pre_get_posts', 'cidweb_modifie_requete_principal' ); // = event listener
+    // pre_get_posts - permet de faire les dernières modifications dans la requête avant d l’exécuter
      
     /**
     * Permet de modifier les titres du menu "cours"
@@ -96,3 +98,40 @@ add_theme_support('custom-background');
     }
 
    add_filter('nav_menu_item_title', 'perso_menu_item_title', 10, 3);   // 3 - nombre des paramètres, 10 - niveau de priorité
+
+
+/*******************   Enregistrement de sidebar   **************************** */
+
+// Enregistrer le sidebar
+function enregistrer_sidebar() {
+    register_sidebar( array(
+        'name' => __( 'Pied de page 1', '31w-theme' ), // nom du theme
+        'id' => 'pied-page-1',
+        'description' => __( 'Une zone widget pour afficher des widgets dans la footer.', '31w-theme' ),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2 class="widget-title">',
+        'after_title' => '</h2>',
+    ) );
+
+    register_sidebar( array(
+        'name' => __( 'Pied de page 2', '31w-theme' ), // nom du theme
+        'id' => 'pied-page-2',
+        'description' => __( 'Une zone widget pour afficher des widgets dans la footer.', '31w-theme' ),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2 class="widget-title">',
+        'after_title' => '</h2>',
+    ) );
+
+    register_sidebar( array(
+        'name' => __( 'Pied de page 3', '31w-theme' ), // nom du theme
+        'id' => 'pied-page-3',
+        'description' => __( 'Une zone widget pour afficher des widgets dans la footer.', '31w-theme' ),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2 class="widget-title">',
+        'after_title' => '</h2>',
+    ) );
+}
+add_action( 'widgets_init', 'enregistrer_sidebar' );
