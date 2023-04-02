@@ -1,28 +1,22 @@
-# TP #1
-## Ameliorer la structure générale  du thème  
-### Auteur: Olena K
-#### Objectifs
-- Formater en scss l'afichage de fichier markdown
-- Créer des modèles pour afficher des archives d'article
-- Ameliorer de module front-page.php
-- Création de menu
-- Créer un site adaptatif en utilisant l'approche mobile-first
-- Créer un minimum de 10 commits
-- Déployer le site local vers un serveur distant
+# Exercice #3 (5 points)
 
-#### Barème
+###### L\'objectif de l'exercice #3:
+- Ajouter, gérer et utiliser des champs personnalisés
+- Adapter le menu aside et le menu de l'entete 
+- Déployer votre projet sur le serveur **_Siteground_**
+###### L'exercice vous permettra de vous familiariser avec les champs personnalisés
+- Cet exercice est un premiere étape de développement du TP2
+###### Déroulement du projet
+> Les « **_commits_** » seront poussés dans le dépôt **_31w_**  de votre github. Dans la branche **_exer3_**
+> L\'ensemble des commits devra s\'étaler progressivement à partir de la journée de remise du devis jusqu\'à la remise finale de l'exercice #3 
+> Un minimum de 5 commits pour le thème  permettra d\'évaluer l\'évolution de votre projet
+## Barème de correction sur 5 points
+1. Organisation des commits sur Github minimum 5 commits  pour le thème **_(1 points)_**
+   - Minimum de 5 commits étalés sur trois jours pour le thème 
+   - Messages clairs
+   - Déploiement de votre site sur Siteground
+   - Un readme.md pour le thème: auteur, titre du projet et description
 
-- Organisation du github /2
-  - Les messages de commit sont préfixés avec le numéro du cours
-  - Les commits sont bien commentés les messages sont clairs, spécifiques et non répétitifs
-  - Un minimum de 5 commits
-  - Le readme.md devrait être adapté pour l'exercice #2 et contenir un lien vers le site siteground
-  - Les commits sont étalés depuis le 16 février
-- Fonctionnement du thème /1
-  - La navigation fonctionne bien
-  - Les modèles front-page et single sont présents et affichent le bon contenu
-  - Le thème a été bien déployé sur le serveur Siteground
-- Design Sass/CSS /2
-  - La page d'accueil est original
-  - La pagination est bien structurée
-  - Le Sass est bien commenté
+2. Utilisation et fonctionnement des champs personnalisé **_(2 points)_**
+3. Création de template-parts pour single.php « single-cours.php » et « single-note.php » pour afficher un article cours ou note-cours **_(2 points)_**
+3. Création de template-parts pour single.php « single-cours.php » et « single-note.php » pour afficher un article cours ou note-cours **_(2 points)_** 
