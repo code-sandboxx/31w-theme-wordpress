@@ -1,5 +1,4 @@
 # Exercice #3 (5 points)
-
 ###### L\'objectif de l'exercice #3:
 - Ajouter, gérer et utiliser des champs personnalisés
 - Adapter le menu aside et le menu de l'entete 
