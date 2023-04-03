@@ -11,7 +11,7 @@
 </section>
 
 <section class="footer__lien">
-    <div><?php wp_nav_menu(array('menu'=>'lien-externe')); ?></div>
+    <div><?php wp_nav_menu(array('menu'=>'lien-externe-1')); ?></div>
     <div><?php  ?></div>
     <div><?php  ?></div>
 </section>

@@ -75,7 +75,7 @@ Mise en page avec display grid
 .no-aside{ // annule le aside
    
     grid-template-areas:
-      "header"     
+      "header"      
       "main"
       "footer";
     row-gap: 50px;
