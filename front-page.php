@@ -4,8 +4,16 @@
 */
 get_header() ?>
 <main class="site__main">
-    <code>front-page.php</code>
-    <h3>front-page.php</h3>
+    <section class="viewport">
+        <h1>TP2</h1>
+        <h4>Auteur: Olena</h4>
+        <h4>Cours: 31w - Introduction à un gestionnaire de contenu</h4>
+        <?php wp_nav_menu(array(
+            "menu"=>"evenement",
+            "container"=>"nav",
+            "container_class"=>"menu__bloc"
+        )); ?>
+    </section>
     <section class="blocflex">            
         <?php 
         if (have_posts()):
