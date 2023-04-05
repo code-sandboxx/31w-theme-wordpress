@@ -5,7 +5,8 @@
 get_header() ?>
 <main class="site__main">
     <section class="viewport">
-        <h1>TP2</h1>
+        <h1>Exer4 / TP2</h1>
+        <code>Front-page</code>
         <h4>Auteur: Olena</h4>
         <h4>Cours: 31w - Introduction à un gestionnaire de contenu</h4>
         <?php wp_nav_menu(array(

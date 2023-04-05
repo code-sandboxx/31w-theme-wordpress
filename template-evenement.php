@@ -4,13 +4,13 @@
  *
  */
 ?>
-
+<code>template-evenement.php</code>
 <?php get_header(); ?>
 <main class="site__main">
 <?php
 if ( have_posts() ) : the_post(); ?>
 <?php the_post_thumbnail( 'full' ); ?>
-<?php the_post_thumbnail( 'thumbnail' ); ?>
+
 <h1><?= get_the_title(); ?></h1>
 <?php the_content();?>
 <p>L'adresse de l'evénement<?php the_field('adresse'); ?></p>
@@ -19,3 +19,6 @@ if ( have_posts() ) : the_post(); ?>
 </main><!-- #main -->
 <?php
 get_footer();
+
+//  <?php the_post_thumbnail( 'thumbnail' ); 
+?>

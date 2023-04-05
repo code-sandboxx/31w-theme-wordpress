@@ -11,13 +11,16 @@
             a{
                 font-size: 2rem;
                 text-decoration: none;
+                margin-left: 40px;
             }
-
         }
-
-
     }
-
-
-
 }
+
+.evenement__porte{
+    background-image: url('https://s2.svgbox.net/hero-outline.svg?ic=calendar');
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+    background-position: left top;
+}
+

@@ -63,6 +63,8 @@ add_theme_support( 'post-thumbnails' );
 
     add_action( 'pre_get_posts', 'cidweb_modifie_requete_principal' ); // = event listener
     // pre_get_posts - permet de faire les dernières modifications dans la requête avant d l’exécuter
+    
+/***************************************************************************** */    
      
     /**
     * Permet de modifier les titres du menu "cours"
@@ -70,35 +72,52 @@ add_theme_support( 'post-thumbnails' );
     * @param $item : le choix global
     * @param $args: Object qui représente la structure de menu
     * */
-    function perso_menu_item_title($title, $item, $args) {
+function perso_menu_item_title($title, $item, $args) {
         
         // Remplacer 'nom_de_votre_menu' par l'identifiant de votre menu
-        if($args->menu == 'cours') {
+    if($args->menu == 'cours') {
             // Modifier la longueur du titre en fonction de vos besoins
            // $title = wp_trim_words($title, 3, ' ... ');
 
-            $sigle = substr($title, 4, 3); // a partir de 4 element, on garde juste 3 caractères
-            $title = substr($title, 7);
-            $title = "<span class='cours__sigle'>" .$sigle. "</span>" .
-                     "<span class='cours__titre'>". "  " . wp_trim_words($title, 2, ' ... ') . "</span>";          
-        }        
+        $sigle = substr($title, 4, 3); // a partir de 4 element, on garde juste 3 caractères
+        $title = substr($title, 7);
+        $title = "<span class='cours__sigle'>" .$sigle. "</span>" .
+                "<span class='cours__titre'>". "  " . wp_trim_words($title, 2, ' ... ') . "</span>";          
+    }        
 
-        else if($args->menu == 'note-wp') {
-            $numero = substr($title, 0, 2); 
-            $title = substr($title, 2); 
+    else if($args->menu == 'note-wp') {
+        $numero = substr($title, 0, 2); 
+        $title = substr($title, 2); 
         
-            if(substr($numero, 0, 1) == '0'){ 
-                $numero = substr($numero, 1, 1); 
-            }
-                      
-            $title = "<span class='note__numero'>" .$numero. "</span>" . 
-                     "<span class='note__titre'>". " - " . substr($title, 1) . "</span>";          
+        if(substr($numero, 0, 1) == '0'){ 
+            $numero = substr($numero, 1, 1); 
         }
-               
-        return  $title; // pour séparer le sigle / numero et le texte 
+                      
+        $title = "<span class='note__numero'>" .$numero. "</span>" . 
+                    "<span class='note__titre'>". " - " . substr($title, 1) . "</span>";          
     }
+               
+    return  $title; // pour séparer le sigle / numero et le texte 
+}
 
-   add_filter('nav_menu_item_title', 'perso_menu_item_title', 10, 3);   // 3 - nombre des paramètres, 10 - niveau de priorité
+add_filter('nav_menu_item_title', 'perso_menu_item_title', 10, 3);   // 3 - nombre des paramètres, 10 - niveau de priorité
+
+/****************************************************************************** */
+
+function ajouter_description_class_menu( $items, $args ) {
+    // Vérifier si le menu correspondant est celui que vous souhaitez modifier
+    if ( 'evenement' === $args->menu ) {
+        foreach ( $items as $item ) {
+            // Récupérer le titre, la description et la classe personnalisée
+            $titre = $item->title;
+            $description = $item->description;   
+            // Ajouter la description et la classe personnalisée à l'élément de menu
+            $item->title.= '<span>' . " " . $description . '</span>';
+        }
+    }
+    return $items;
+}
+add_filter( 'wp_nav_menu_objects', 'ajouter_description_class_menu', 10, 2 );
 
 
 /*******************   Enregistrement de sidebar   **************************** */

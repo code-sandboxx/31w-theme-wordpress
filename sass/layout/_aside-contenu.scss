@@ -14,7 +14,7 @@ Mise en page avec display grid
 .site__main {
     background-color: rgba(227, 197, 229, 0.7);    
     grid-area: main;
-    overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */   
+   // overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */   
     padding-top: 30px;    
   }
   

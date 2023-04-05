@@ -3,8 +3,8 @@
     Modèle index.php représente le modèle par défaut du thème
 */
 get_header() ?>
-<main class = "site__main">
-     <h3>index.php</h3>
+<main class = "site__main">     
+    <code>index.php</code>
 <?php 
 if (have_posts()):
     while (have_posts()) : the_post();
@@ -13,9 +13,9 @@ if (have_posts()):
         <h1><a href="<?php the_permalink(); ?>"><?= get_the_title();  ?> </a></h1>
 
         <?php 
-        // the_content();
+        the_content();
         // the_excerpt();
-        echo wp_trim_words(get_the_excerpt(), 4);
+        //echo wp_trim_words(get_the_excerpt(), 4);
     endwhile;
 endif;
 ?>   
