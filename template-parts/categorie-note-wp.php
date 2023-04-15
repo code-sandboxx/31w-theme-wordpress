@@ -4,7 +4,9 @@
 *pour un article de catégorie note-wp
 */
 $titre = get_the_title();
-if(substr($titre, 0, 1) == "0"){} // a completer
+if(substr($titre, 0, 1) == "0"){
+    $titre = substr($titre, 1, 6);
+} 
 $sigle = substr($titre, 0, 7);
 $titre_long = substr($titre, 7, -5);
 ?>
