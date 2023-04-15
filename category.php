@@ -3,11 +3,21 @@
     Modèle category.php permet d'afficher une archive par catégorie d'article
 */
 get_header() ?>
-   <main class="site__main">
-      <code>category.php</code>
-   <section class="blocflex">
-      <?php
+   <main class="site__main">     
+      <?php 
       $category = get_queried_object();
+      if ($category->slug == "cours"){
+         echo "<h1 class='titre__site'>Cours</h1>";
+      }
+      else if($category->slug == "note-wp"){
+         echo "<h1 class='titre__site'>Notes Wordpress</h1>";
+      }?> 
+
+   <section class="blocflex">
+      <?php     
+      $category = get_queried_object();
+      
+
       $args = array(
          'category_name' => $category->slug, // récupérer le nom de catégorie
          'orderby' => 'title',
