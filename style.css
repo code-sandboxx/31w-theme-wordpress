@@ -653,6 +653,16 @@ h2 {
 .site__footer .footer__lien div {
   flex: 1 0 33%;
 }
+.site__footer .footer__lien a {
+  text-decoration: none;
+  color: var(--lightPurple);
+}
+.site__footer .footer__lien a:hover {
+  color: var(--orange);
+}
+.site__footer .footer__lien li {
+  list-style: none;
+}
 
 .menu-cours-container .menu,
 .menu-note-wp-container .menu {

@@ -24,5 +24,21 @@
         div{
             flex: 1 0 33%;
         }
+
+        a{
+            text-decoration: none;
+            color: var(--lightPurple);
+        }
+
+        a:hover{
+            color: var(--orange);
+        }
+
+        li{
+            list-style: none;
+        }
+
+
     }
-}
+
+}    
