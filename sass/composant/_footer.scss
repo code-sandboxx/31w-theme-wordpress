@@ -12,13 +12,27 @@
     }
 
     .footer__widget{
-        display: flex;
-        flex-direction: row;
+
+        flex-direction: column; 
+
+        @media screen and (min-width: 675px){
+            display: flex;
+            flex-direction: row;                 
+        }  
+
         div{
-            flex: 1 0 30%;
-            margin: 10px;
+           
+            flex: 1 0 90%;
+
+            @media screen and (min-width: 675px){
+                flex: 1 0 30%;
+                margin: 10px;                
+            }  
         }
-    }
+    } 
+
+
+
 
     .footer__lien{
         div{

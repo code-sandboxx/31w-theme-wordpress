@@ -649,12 +649,22 @@ h2 {
   text-align: center;
 }
 .site__footer .footer__widget {
-  display: flex;
-  flex-direction: row;
+  flex-direction: column;
+}
+@media screen and (min-width: 675px) {
+  .site__footer .footer__widget {
+    display: flex;
+    flex-direction: row;
+  }
 }
 .site__footer .footer__widget div {
-  flex: 1 0 30%;
-  margin: 10px;
+  flex: 1 0 90%;
+}
+@media screen and (min-width: 675px) {
+  .site__footer .footer__widget div {
+    flex: 1 0 30%;
+    margin: 10px;
+  }
 }
 .site__footer .footer__lien div {
   flex: 1 0 33%;
