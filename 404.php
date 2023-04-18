@@ -1,6 +1,6 @@
 <?php 
 /**
-    Modele index.php represente le modele par defaut du theme
+    Modèle index.php représente le modèle par défaut du thème
 */ 
 ?>
 <?php get_header()?> 

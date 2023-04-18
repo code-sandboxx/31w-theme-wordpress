@@ -7,7 +7,7 @@
     <title>Document</title>
     <?php wp_head(); ?> 
 </head>
-<body class="custom-background site <?= (is_front_page() ? "no-aside" : "");  ?> ">
+<body class="custom-background site <?= (is_front_page() || is_404() ? "no-aside" : "");  ?> ">
 
     <header class="site__entete">
         <section class="logomenu">
@@ -40,7 +40,7 @@
         <h1 class="site__titre <?= $classe ?>"><a href="<?php bloginfo('url');?>"><?php bloginfo('name');?></a></h1>       
         <h2 class="sous__soustitre <?= $classe ?>"><?php bloginfo('description');?></h2>
     </header> 
-    <?php if(is_front_page() == false){
+    <?php if(is_front_page() || is_404() == false){
         get_template_part("template-parts/aside");
     }     
    ?>
