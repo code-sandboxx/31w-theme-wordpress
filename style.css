@@ -829,7 +829,7 @@ h2 {
   font-size: 90px;
   font-weight: 800;
 }
-.err-message p {
+.err-message h2 {
   color: red;
   font-size: 16px;
 }

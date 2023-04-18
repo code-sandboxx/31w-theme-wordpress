@@ -7,7 +7,7 @@
     <title>Document</title>
     <?php wp_head(); ?> 
 </head>
-<body class="custom-background site <?= (is_front_page() || is_404() ? "no-aside" : "");  ?> ">
+<body <?php body_class('custom-background site ' . (is_front_page() || is_404() ? "no-aside" : "")); ?>>
 
     <header class="site__entete">
         <section class="logomenu">

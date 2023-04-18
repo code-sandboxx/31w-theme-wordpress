@@ -9,7 +9,7 @@
 
     <section class="err-message">
         <h1>Erreur 404</h1>
-        <p>Page introuvable, vous pouvez tenter une recherche</p>
+        <h2>Page introuvable, vous pouvez tenter une recherche</h2>
     </section>
     
 </main>   
