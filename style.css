@@ -868,6 +868,8 @@ body.error404::before {
 }
 
 .conteneur_choix {
+  display: flex;
+  flex-direction: column;
   padding: 30px;
 }
 .conteneur_choix h3 {
@@ -877,6 +879,27 @@ body.error404::before {
 }
 .conteneur_choix .menu-item {
   margin-right: 15px;
+}
+.conteneur_choix .menu-item .cours__titre {
+  display: none;
+  margin-right: 15px;
+}
+@media screen and (min-width: 1000px) {
+  .conteneur_choix .menu-item .cours__titre {
+    display: inline;
+  }
+}
+.conteneur_choix .menu-item .cours__sigle {
+  margin-right: 15px;
+}
+@media screen and (min-width: 1000px) {
+  .conteneur_choix .menu-item .cours__sigle {
+    margin-right: 0;
+  }
+}
+.conteneur_choix a {
+  color: rgb(76, 141, 220);
+  text-decoration: none;
 }
 
 /* -------------------------- LAYOUT */

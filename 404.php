@@ -11,17 +11,7 @@
     </section>
     <?php get_template_part('template-parts/custom-recherche'); ?>
 
-    <section class="conteneur_choix">
-
-        <h3>Les notes de cours</h3>
-
-        <?php
-        $menu_note_wp = wp_get_nav_menu_items('note-wp');
-        foreach ($menu_note_wp as $menu_item) {
-            $title = perso_menu_item_title($menu_item->title, $menu_item, (object) array('menu' => 'note-wp'));
-            echo '<span class="menu-item"><a href="' . $menu_item->url . '">' . $title . '</a></span>';
-        }
-        ?>  
+    <section class="conteneur_choix">     
 
    
         <h3>Nos choix de cours</h3>
@@ -33,6 +23,16 @@
             echo '<span class="menu-item"><a href="' . $menu_item->url . '">' . $title . '</a><span>';
         }
         ?>
+
+        <h3>Les notes de cours</h3>
+
+        <?php
+        $menu_note_wp = wp_get_nav_menu_items('note-wp');
+        foreach ($menu_note_wp as $menu_item) {
+            $title = perso_menu_item_title($menu_item->title, $menu_item, (object) array('menu' => 'note-wp'));
+            echo '<span class="menu-item"><a href="' . $menu_item->url . '">' . $title . '</a></span>';
+        }
+        ?> 
     </section>
 
 </main>   
