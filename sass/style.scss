@@ -1,6 +1,6 @@
 /*
 Theme Name: 31w-olena
-Theme URI: https://github.com/code-sandboxx/31w-theme-wordpress/tree/tp2
+Theme URI: https://github.com/code-sandboxx/31w-theme-wordpress/tree/EF
 Author: Olena K
 Author URI: Olena K
 Description: Introduction à la création d'un thème Wordpress
@@ -34,6 +34,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @import "composant/menu_cours";
 @import "composant/menu_note_wp";
 @import "composant/menu_bloc";
+@import "composant/page404";
 
 /* -------------------------- LAYOUT */
 @import "layout/aside-contenu";

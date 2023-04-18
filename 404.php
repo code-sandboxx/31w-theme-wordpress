@@ -4,9 +4,13 @@
 */ 
 ?>
 <?php get_header()?> 
-<main class = "site__main">
+<main class = "site__404">
     <code>404</code>
-    <h1>Erreur 404 - la page n'existe pas</h1>
+
+    <section class="err-message">
+        <h1>Erreur 404</h1>
+        <p>Page introuvable, vous pouvez tenter une recherche</p>
+    </section>
     
 </main>   
 <?php get_footer(); ?>

@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*
 Theme Name: 31w-olena
-Theme URI: https://github.com/code-sandboxx/31w-theme-wordpress/tree/tp2
+Theme URI: https://github.com/code-sandboxx/31w-theme-wordpress/tree/EF
 Author: Olena K
 Author URI: Olena K
 Description: Introduction à la création d'un thème Wordpress
@@ -818,6 +818,20 @@ h2 {
 }
 .evenement__porte a:hover, .evenement__carriere a:hover {
   color: var(--orange);
+}
+
+.err-message {
+  width: 30%;
+  text-align: center;
+}
+.err-message h1 {
+  color: red;
+  font-size: 90px;
+  font-weight: 800;
+}
+.err-message p {
+  color: red;
+  font-size: 16px;
 }
 
 /* -------------------------- LAYOUT */
