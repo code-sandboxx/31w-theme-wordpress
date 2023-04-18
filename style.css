@@ -820,10 +820,6 @@ h2 {
   color: var(--orange);
 }
 
-.err-message {
-  width: 30%;
-  text-align: center;
-}
 .err-message h1 {
   color: red;
   font-size: 90px;
@@ -832,10 +828,12 @@ h2 {
 .err-message h2 {
   color: red;
   font-size: 16px;
+  text-align: center;
 }
 
 body.error404 {
   position: relative;
+  height: 100vh;
 }
 
 body.error404::before {
@@ -847,6 +845,11 @@ body.error404::before {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
   z-index: -1;
+}
+
+.site__404 {
+  display: flex;
+  justify-content: center;
 }
 
 /* -------------------------- LAYOUT */
