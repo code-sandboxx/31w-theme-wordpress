@@ -1,6 +1,6 @@
 .main__recherche{   
     display: flex;
-    flex-wrap: nowrap;   
+    flex-direction: column;
 }
 
 .recherche__input[type="search"] {    
